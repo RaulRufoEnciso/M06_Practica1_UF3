@@ -1,0 +1,29 @@
+<html>
+    <!--Rojo
+Naranja
+Amarillo 
+Verde
+Azul 
+Morado
+crea una funcion para las coas que no varian
+-->
+    <body>
+        <canvas id="myCanvas" width="300" height="150">
+        
+        <script>
+        var c = document.getElementById("myCanvas");
+        var rojo = c.getContext("2d");
+        rojo.beginPath();
+        rojo.lineWidth = 10;
+        rojo.strokeStyle = "#ff0000";
+        rojo.arc(100, 150, 50, 0, 2 * Math.PI);
+        rojo.stroke();
+        var amarillo = c.getContext("2d");
+        amarillo.beginPath();
+        amarillo.lineWidth = 10;
+        amarillo.strokeStyle = "#ff6600";
+        amarillo.arc(100, 150, 60, 0, 2 * Math.PI);
+        amarillo.stroke();
+        </script>  
+    </body>
+</html>
