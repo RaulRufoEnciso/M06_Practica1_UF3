@@ -1,0 +1,45 @@
+<html>
+    <!--Rojo
+Naranja
+Amarillo 
+Verde
+Azul 
+Morado
+
+Crea una funcion para las coas que no varian
+-->
+    <body>
+        <canvas id="myCanvas" width="300" height="250">
+        
+        <script>
+            
+            // Funcion que crea y muestra los arcos
+            function valoresRepetidos(c1,color,size) {
+                var arco = c1.getContext("2d");
+                arco.beginPath();
+                arco.lineWidth = 10;
+                arco.strokeStyle = color;
+                arco.arc(150, 150, size, Math.PI, 0);
+                arco.stroke();
+            }
+            
+            var c = document.getElementById("myCanvas");
+            // Lista de los colores del arcoiris
+            var colores = ["#ff0000","#ff6600","#ffff00","#00ff00","#0099ff","#ff00ff"]
+            // valor en el que inica el tamaño del arco
+            var valorInicial = 40;
+
+            // Para revertir la array de colores 
+            // colores.reverse(); 
+            
+            // Bucle para recorer los valores de tamaño y color
+            for (let i in colores){
+                valoresRepetidos(c,colores[i],valorInicial);
+                valorInicial+=10;
+                console.log(i,valorInicial)
+            }
+            
+            
+        </script>  
+    </body>
+</html>
